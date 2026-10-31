@@ -1,0 +1,127 @@
+/* Tershop Online VE — estilos complementarios del flujo de compra.
+   La identidad visual original (oscura, azul y cian) permanece en el CSS base de index.html. */
+.ters-extra-panel{display:grid;gap:9px;padding:13px;margin-top:10px;background:#f7f8fa;border:1px solid #dfe4ec;border-radius:12px;color:#202632}
+.ters-extra-panel label{font-size:12px;font-weight:750;color:#333}
+.ters-extra-panel p,.ters-help{font-size:12px;line-height:1.55;color:#6b7280}
+.ters-extra-panel select,.ters-extra-panel input[type=text],.ters-extra-panel input[type=number]{width:100%;padding:10px 12px;border:1px solid #cfd5df;border-radius:9px;background:#fff;color:#171717;min-height:42px}
+.ters-stepper{display:flex;align-items:center;gap:8px;max-width:180px}
+.ters-stepper button{width:38px;height:38px;border:0;border-radius:9px;background:#222;color:#fff;font-size:20px;cursor:pointer}
+.ters-stepper input{width:70px;text-align:center}
+.ters-design-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:10px 0;max-height:250px;overflow:auto}
+.ters-design-option{padding:5px;border:2px solid #ddd;border-radius:10px;background:#fff;cursor:pointer;min-width:0}
+.ters-design-option.selected{border-color:#3B82F6;box-shadow:0 0 0 2px #3B82F633}
+.ters-design-option img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px}
+.ters-design-option small{display:block;font-size:10px;color:#444;padding:4px 0}
+.ters-item-design{font-size:11px;color:#777;margin-top:5px;line-height:1.4}
+.ters-warning{padding:10px 12px;margin:10px 0;border-radius:9px;background:#fff4dc;color:#795000;font-size:12px;line-height:1.5}
+.ters-continue{width:100%;margin-top:9px;padding:11px;border:1px solid #555;border-radius:10px;background:transparent;color:inherit;font-weight:700;cursor:pointer}
+.ters-extra-chip{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:7px 9px;margin:5px 0;border-radius:8px;background:#fff;border:1px solid #dfe4ec;font-size:11px;color:#303744}
+.ters-extra-chip button{border:0;border-radius:7px;padding:5px 8px;background:#fee2e2;color:#991b1b;font-weight:700;cursor:pointer}
+.ters-folder{padding:12px;border:1px solid #3B82F6;border-radius:10px;background:#151a22;color:#fff;cursor:pointer;font-weight:700;margin:5px}
+#ckState,#ckOtherState{width:100%;padding:12px;border:1px solid #ccd2dc;border-radius:9px;background:#fff;color:#222}
+.sel-size{display:inline-flex;align-items:center;justify-content:center;min-width:42px;min-height:38px;padding:7px 10px;margin:3px;border:1px solid #bbb;border-radius:8px;background:#fff;color:#222;cursor:pointer}
+.sel-size.on{background:#3B82F6;color:#fff;border-color:#3B82F6}
+.sel-color.on{outline:3px solid #3B82F6;outline-offset:2px}
+.sicons img{width:34px;height:34px;object-fit:contain;margin:4px}
+.hero-video-bg{background:url('FONDO-DE-PAGINA-WEB/FONDO HERO.webp') center/cover no-repeat!important}
+@media(max-width:600px){.ters-design-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.ters-extra-panel{padding:10px}.ck-box{max-height:94vh;overflow:auto}}
+
+
+/* ===== AJUSTES DE LEGIBILIDAD Y RESPONSIVE · V1.2 ===== */
+body { color: #f7f9fc; }
+.sec-st, .fb p, .fl a, .fbt p, .flg a, .map-info {
+  color: #d0d7e2;
+}
+/* Oscurecimiento suave de fondos fotográficos para mantener contraste del texto. */
+.hero, .pro-s, .cat-s, .map-s, .faq-s {
+  background-color: rgba(0,0,0,.42);
+  background-blend-mode: multiply;
+}
+.hero::before {
+  opacity: .72 !important;
+  background: linear-gradient(180deg, rgba(5,7,12,.78), rgba(5,7,12,.60) 48%, rgba(5,7,12,.84)) !important;
+}
+.pro-s, .cat-s, .map-s, .faq-s {
+  background-blend-mode: multiply;
+  background-color: rgba(0,0,0,.48);
+}
+.sec-t, .hero h1, .hero p, .pro-s h2, .cat-s h2, .map-s h2, .faq-s h2 {
+  text-shadow: 0 2px 12px rgba(0,0,0,.72);
+}
+.foot, .foot .con, .fgr, .fb, .fl, .fs, .fbt {
+  min-width: 0;
+  max-width: 100%;
+}
+.foot { width: 100%; overflow: hidden; }
+.foot .con { width: min(100% - 32px, 1200px); margin-inline: auto; padding-inline: 0; }
+.fgr { grid-template-columns: minmax(0,1.5fr) minmax(0,1fr) minmax(0,1fr); }
+.fb p, .fbt p, .foot a { overflow-wrap: anywhere; word-break: normal; }
+.sicons { display:flex; flex-wrap:wrap; align-items:center; gap:10px; }
+.sicons a { display:inline-flex; min-width:0; }
+.sicons img { width:40px; height:40px; object-fit:contain; }
+.fbt { width:100%; gap:12px; }
+.flg { display:flex; flex-wrap:wrap; justify-content:center; gap:10px 20px; width:100%; }
+.flg a { white-space:normal; text-align:center; }
+.foot a[style*="0000FF"] { color:#60a5fa !important; }
+@media (max-width: 760px) {
+  .foot { padding-top:38px; }
+  .fgr { grid-template-columns:minmax(0,1fr); gap:24px; margin-bottom:30px; }
+  .fb p { max-width: none; }
+  .fl h4, .fs h4 { margin-bottom:10px; }
+  .fbt { padding-top:20px; padding-bottom:24px; }
+  .fbt p { max-width:100%; font-size:12px; line-height:1.6; }
+  .flg { gap:9px 14px; }
+}
+@media (max-width: 380px) {
+  .foot .con { width:calc(100% - 24px); }
+  .sicons img { width:36px; height:36px; }
+  .flg a { font-size:12px; }
+}
+
+/* ===== V1.3: CONTRASTE FAQ + PIE SIN DESBORDAMIENTO ===== */
+.faq-s {
+  position: relative;
+  isolation: isolate;
+  background-color: #10141c !important;
+  background-blend-mode: multiply;
+}
+.faq-s::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, rgba(5,8,14,.84), rgba(5,8,14,.90));
+  pointer-events: none;
+}
+.faq-s .sec-t, .faq-s .sec-st, .faq-q, .faq-a p, .faq-ic {
+  color: #f4f7fb !important;
+  opacity: 1 !important;
+  text-shadow: 0 1px 3px rgba(0,0,0,.65);
+}
+.faq-a p { color: #e1e7f0 !important; font-size: clamp(15px, 1.2vw, 17px); }
+.faq-i { border-bottom-color: rgba(255,255,255,.18); }
+.faq-q:focus-visible, .foot a:focus-visible { outline: 2px solid #60a5fa; outline-offset: 4px; }
+html, body { width: 100%; max-width: 100%; margin: 0; overflow-x: clip; }
+body { min-height: 100vh; display: flex; flex-direction: column; }
+body > footer.foot { margin-top: 0 !important; margin-bottom: 0 !important; flex-shrink: 0; }
+.foot { padding: clamp(30px, 4vw, 52px) 0 0 !important; }
+.foot .con { box-sizing: border-box; }
+.fbt { box-sizing: border-box; padding-bottom: max(18px, env(safe-area-inset-bottom)) !important; }
+.fgr { align-items: start; }
+.foot *, .foot *::before, .foot *::after { box-sizing: border-box; }
+@media (max-width: 900px) {
+  .fgr { grid-template-columns: repeat(2, minmax(0,1fr)) !important; }
+  .fb { grid-column: 1 / -1; }
+}
+@media (max-width: 600px) {
+  .faq-s { padding: 58px 0 !important; }
+  .faq-list { padding-inline: 16px !important; }
+  .faq-q { gap: 14px; font-size: 15px; line-height: 1.45; padding: 19px 0; }
+  .faq-a p { font-size: 14px; line-height: 1.7; }
+  .cta-s { padding: 64px 18px !important; }
+  .foot .con { width: calc(100% - 28px) !important; }
+  .fgr { grid-template-columns: minmax(0,1fr) !important; gap: 22px !important; }
+  .fb { grid-column: auto; }
+  .fbt { padding-inline: 0; }
+  .flg { flex-wrap: wrap; }
+}
